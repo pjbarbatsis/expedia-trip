@@ -13,6 +13,8 @@ public class POMTest {
     public void checkOrigin() {
         //Instantiate main page
         MainPage mainPage = new MainPage(driver);
+        System.out.println(mainPage.getSiteUrl());
+        //Issue here: driver will open, but will absolutely NOT open up the URL.
         driver.get(mainPage.getSiteUrl());
         mainPage.typeOrigin("Minneapolis");
         mainPage.typeDestination("Honolulu");

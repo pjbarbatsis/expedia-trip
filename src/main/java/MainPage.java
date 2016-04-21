@@ -1,6 +1,6 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 
 /**
  * Created by Peeta on 4/21/2016.
@@ -19,11 +19,9 @@ public class MainPage {
         this.driver = driver;
     }
 
-    @FindBy(id = "package-origin")
-    private WebElement packageOrigin;
+    private WebElement packageOrigin = driver.findElement(By.id("package-origin"));
 
-    @FindBy(id = "package-destination")
-    private WebElement packageDestination;
+    private WebElement packageDestination = driver.findElement(By.id("package-destination"));
 
     public void typeOrigin(String text) {
         packageOrigin.sendKeys(text);
